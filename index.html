@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Портфолио — Руслан Мекеидзе</title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/components.css" />
+		<link rel="stylesheet" href="css/home.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="toolbar">
+				<button
+					id="langToggle"
+					class="btn lang-btn"
+					aria-label="Switch language"
+				>
+					IT
+				</button>
+			</div>
+			<!-- HERO -->
+			<section class="hero">
+				<div>
+					<h1 data-i18n="hero_name">Руслан Мекеидзе</h1>
+					<p data-i18n="hero_subtitle">
+						Предприниматель • обучающийся веб‑разработчик • бизнес‑консультант
+					</p>
+					<div class="meta">
+						<span
+							><span data-i18n="label_birth">День рождения:</span>
+							<span data-birth>—</span></span
+						>
+						<span
+							><span data-i18n="label_age">Возраст:</span>
+							<span data-age>—</span></span
+						>
+						<span
+							><span data-i18n="label_location">Локация:</span>
+							<span data-i18n="value_location">Италия</span></span
+						>
+					</div>
+					<div class="cta">
+						<button id="cvBtn" class="btn primary" data-i18n="btn_cv">
+							Скачать CV
+						</button>
+						<a class="btn ghost" href="#contacts" data-i18n="btn_contacts"
+							>Контакты</a
+						>
+					</div>
+				</div>
+				<div class="illus">
+					<img src="img/photo/3.PNG" alt="Ruslan Mekeidze" />
+				</div>
+			</section>
+
+			<!-- SKILLS + EXPERIENCE SIDE BY SIDE -->
+			<section class="section" id="skills">
+				<div class="two-col">
+					<div class="section-card">
+						<h2 data-i18n="skills_title">Навыки и планируемый опыт</h2>
+						<p class="sub" data-i18n="skills_sub">
+							Честно: без выдумки. Отмечено, что уже делаю, и что в процессе.
+						</p>
+						<div class="skills-slider-wrap">
+							<div class="skills-slider" id="skillsSlider">
+								<div class="skills-page">
+									<!-- HTML & CSS -->
+									<div class="pill">
+										<span class="status-badge status-basic"
+											><span data-i18n="status_basic">Базовый</span> •
+											≈40%</span
+										>
+										<span class="skill-text" data-i18n="skill_html"
+											>HTML & CSS уровень: базовый → уверенный (в процессе).
+											Семантика, адаптив, гриды, флексы.</span
+										>
+									</div>
+									<!-- JavaScript -->
+									<div class="pill">
+										<span
+											class="status-badge status-next"
+											data-i18n="status_next"
+											>Следующий к изучению</span
+										>
+										<span class="skill-text" data-i18n="skill_js"
+											>JavaScript основы: DOM, события, fetch. Дальше: модули,
+											компоненты, карусели, модалки.</span
+										>
+									</div>
+									<!-- AI/ML instead of WordPress -->
+									<div class="pill">
+										<span class="status-badge status-basic"
+											><span data-i18n="level_advanced">Advanced</span></span
+										>
+										<span class="skill-text" data-i18n="skill_ai"
+											>Искусственный интеллект (AI/ML): LLM (GPT),
+											промпт‑инжиниринг, embeddings, RAG, LangChain, векторные
+											БД (FAISS/Pinecone), OpenAI API, Hugging Face, Stable
+											Diffusion.</span
+										>
+									</div>
+									<!-- Laravel -->
+									<div class="pill">
+										<span
+											class="status-badge status-soon"
+											data-i18n="status_soon"
+											>Скоро</span
+										>
+										<span class="skill-text" data-i18n="skill_laravel"
+											>Laravel план: MVC, маршруты, Blade, Eloquent. Цель: MVP
+											личного кабинета.</span
+										>
+									</div>
+								</div>
+								<div class="skills-page">
+									<!-- CMS block (WordPress moved here) -->
+									<div class="pill">
+										<span
+											class="status-badge status-soon"
+											data-i18n="status_soon"
+											>Скоро</span
+										>
+										<span class="skill-text" data-i18n="skill_cms"
+											>CMS: WordPress, Joomla, Drupal — установка, темы,
+											плагины, безопасность. Цель: быстрый корпоративный
+											сайт/блог.</span
+										>
+									</div>
+									<!-- Git -->
+									<div class="pill">
+										<span
+											class="status-badge status-soon"
+											data-i18n="status_soon"
+											>Скоро</span
+										>
+										<span class="skill-text" data-i18n="skill_git"
+											>Git & GitHub ветки, pull‑requests, issues. CI
+											позже.</span
+										>
+									</div>
+									<!-- UI/UX + React & libs -->
+									<div class="pill">
+										<span
+											class="status-badge status-soon"
+											data-i18n="status_soon"
+											>Скоро</span
+										>
+										<span class="skill-text" data-i18n="skill_uiux"
+											>UI/UX + библиотеки: React, Vue, Tailwind, MUI;
+											дизайн‑системы и паттерны интерфейсов.</span
+										>
+									</div>
+								</div>
+							</div>
+							<div class="skills-dots" id="skillsDots"></div>
+						</div>
+					</div>
+					<div class="side-stack">
+						<aside class="aside-card">
+                        <h3 data-i18n="exp_work_title">Опыт работы</h3>
+                        <div class="status-bar">
+                          <span class="status-label" data-i18n="exp_status_label">Статус работы:</span>
+                          <span class="status-chip open"><span class="dot"></span><span data-i18n="exp_status_open">Открыт к предложениям</span></span>
+                        </div>
+                        <div class="xp-viewport">
+                        <ul class="xp-list">
+								<li class="xp-item">
+									<p class="xp-title" data-i18n="xp1_title">Продавец мобильных телефонов и компьютеров</p>
+									<div class="xp-meta">
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<path
+													d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"
+												></path>
+												<circle cx="12" cy="10" r="3"></circle>
+											</svg>
+											<span data-i18n="xp1_place">Украина, Киев</span>
+										</span>
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<rect
+													x="3"
+													y="4"
+													width="18"
+													height="18"
+													rx="2"
+													ry="2"
+												></rect>
+												<line x1="16" y1="2" x2="16" y2="6"></line>
+												<line x1="8" y1="2" x2="8" y2="6"></line>
+												<line x1="3" y1="10" x2="21" y2="10"></line>
+											</svg>
+											<span data-i18n="xp1_time">2013–2014</span>
+										</span>
+									</div>
+								</li>
+								<li class="xp-item">
+									<p class="xp-title" data-i18n="xp2_title">Проект‑менеджер в компании по ремонту электроники</p>
+									<div class="xp-meta">
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<path
+													d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"
+												></path>
+												<circle cx="12" cy="10" r="3"></circle>
+											</svg>
+											<span data-i18n="xp2_place">Украина, Киев</span>
+										</span>
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<rect
+													x="3"
+													y="4"
+													width="18"
+													height="18"
+													rx="2"
+													ry="2"
+												></rect>
+												<line x1="16" y1="2" x2="16" y2="6"></line>
+												<line x1="8" y1="2" x2="8" y2="6"></line>
+												<line x1="3" y1="10" x2="21" y2="10"></line>
+											</svg>
+											<span data-i18n="xp2_time">2014–2015</span>
+										</span>
+									</div>
+								</li>
+								<li class="xp-item">
+									<p class="xp-title" data-i18n="xp3_title">Предприниматель — магазины электроники и ремонта</p>
+									<div class="xp-meta">
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<path
+													d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"
+												></path>
+												<circle cx="12" cy="10" r="3"></circle>
+											</svg>
+											<span data-i18n="xp3_place">Украина, Киев</span>
+										</span>
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<rect
+													x="3"
+													y="4"
+													width="18"
+													height="18"
+													rx="2"
+													ry="2"
+												></rect>
+												<line x1="16" y1="2" x2="16" y2="6"></line>
+												<line x1="8" y1="2" x2="8" y2="6"></line>
+												<line x1="3" y1="10" x2="21" y2="10"></line>
+											</svg>
+											<span data-i18n="xp3_time">2016–2019</span>
+										</span>
+									</div>
+								</li>
+								<li class="xp-item">
+									<p class="xp-title" data-i18n="xp4_title">Директор Smile Mobile — продажа телефонов и аксессуаров</p>
+									<div class="xp-meta">
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<path
+													d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"
+												></path>
+												<circle cx="12" cy="10" r="3"></circle>
+											</svg>
+											<span data-i18n="xp4_place">Украина, Киев</span>
+										</span>
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<rect
+													x="3"
+													y="4"
+													width="18"
+													height="18"
+													rx="2"
+													ry="2"
+												></rect>
+												<line x1="16" y1="2" x2="16" y2="6"></line>
+												<line x1="8" y1="2" x2="8" y2="6"></line>
+												<line x1="3" y1="10" x2="21" y2="10"></line>
+											</svg>
+											<span data-i18n="xp4_time">2019–2020</span>
+										</span>
+									</div>
+								</li>
+								<li class="xp-item">
+									<p class="xp-title" data-i18n="xp5_title">Переезд в Италию — изучение итальянского языка</p>
+									<div class="xp-meta">
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<path
+													d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"
+												></path>
+												<circle cx="12" cy="10" r="3"></circle>
+											</svg>
+											<span data-i18n="xp5_place">Украина → Италия</span>
+										</span>
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<rect
+													x="3"
+													y="4"
+													width="18"
+													height="18"
+													rx="2"
+													ry="2"
+												></rect>
+												<line x1="16" y1="2" x2="16" y2="6"></line>
+												<line x1="8" y1="2" x2="8" y2="6"></line>
+												<line x1="3" y1="10" x2="21" y2="10"></line>
+											</svg>
+											<span data-i18n="xp5_time">2022–2023</span>
+										</span>
+									</div>
+								</li>
+								<li class="xp-item">
+									<p class="xp-title" data-i18n="xp6_title">R&D/Design — Monsummano Terme (advertising design)</p>
+									<div class="xp-meta">
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<path
+													d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"
+												></path>
+												<circle cx="12" cy="10" r="3"></circle>
+											</svg>
+											<span data-i18n="xp6_place">Италия, Monsummano Terme</span>
+										</span>
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<rect
+													x="3"
+													y="4"
+													width="18"
+													height="18"
+													rx="2"
+													ry="2"
+												></rect>
+												<line x1="16" y1="2" x2="16" y2="6"></line>
+												<line x1="8" y1="2" x2="8" y2="6"></line>
+												<line x1="3" y1="10" x2="21" y2="10"></line>
+											</svg>
+											<span data-i18n="xp6_time">2023–2024</span>
+										</span>
+									</div>
+								</li>
+								<li class="xp-item">
+									<p class="xp-title" data-i18n="xp7_title">Project Manager — Alia Edilizia SRL, Punto Infissi</p>
+									<div class="xp-meta">
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<path
+													d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"
+												></path>
+												<circle cx="12" cy="10" r="3"></circle>
+											</svg>
+											<span data-i18n="xp7_place">Италия</span>
+										</span>
+										<span>
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<rect
+													x="3"
+													y="4"
+													width="18"
+													height="18"
+													rx="2"
+													ry="2"
+												></rect>
+												<line x1="16" y1="2" x2="16" y2="6"></line>
+												<line x1="8" y1="2" x2="8" y2="6"></line>
+												<line x1="3" y1="10" x2="21" y2="10"></line>
+											</svg>
+											<span class="xp-current" data-i18n="xp7_time">2024 — по наст. время</span>
+										</span>
+									</div>
+								</li>
+                        </ul>
+                        </div>
+                        <div class="xp-dots" id="xpDots"></div>
+						</aside>
+
+						<aside class="aside-card">
+							<h3 data-i18n="edu_title">Образование</h3>
+							<div class="status-row">
+								<span class="status-chip study" data-i18n="edu_study"
+									>В процессе обучения — SKILLBOX</span
+								>
+							</div>
+							<ul class="xp-list">
+								<li class="xp-item">
+									<p class="xp-title" data-i18n="edu_college">Колледж (2008–2012) — Бухгалтерия и учёт, оператор компьютерного набора</p>
+								</li>
+								<li class="xp-item">
+									<p class="xp-title" data-i18n="edu_courses">SKILLBOX — курсы</p>
+									<div class="xp-meta">
+										<span>HTML</span><span>CSS</span><span>JavaScript</span
+										><span>Python</span>
+									</div>
+								</li>
+							</ul>
+						</aside>
+					</div>
+				</div>
+			</section>
+
+			<!-- PROJECTS CAROUSEL -->
+			<section class="section" id="projects">
+				<div class="section-card">
+					<h2 data-i18n="projects_title">Проекты</h2>
+					<p class="sub" data-i18n="projects_sub">
+						Горизонтальная карусель. Нажми «Подробнее» — откроется модалка с
+						описанием.
+					</p>
+
+					<div class="carousel-wrap">
+						<button
+							class="arrow prev"
+							aria-label="Назад"
+							data-i18n-aria="aria_prev"
+						>
+							◀
+						</button>
+						<div class="carousel" id="projCarousel">
+							<!-- Project 1 -->
+							<article
+								class="card"
+								data-title-ru="Landing «Remont PRO»"
+								data-title-it="Landing «Remont PRO»"
+								data-title="Landing «Remont PRO»"
+								data-img="https://picsum.photos/seed/remontpro/1200/675"
+								data-tech-ru="HTML, CSS Grid, JS (модалки, анимации)"
+								data-tech-it="HTML, CSS Grid, JS (modali, animazioni)"
+								data-tech="HTML, CSS Grid, JS (модалки, анимации)"
+								data-desc-ru="Одностраничник для ремонтной компании: герой, калькулятор, отзывы, CTA. Адаптивная сетка, быстрые загрузки, Lighthouse 95+."
+								data-desc-it="One‑page per un'azienda di ristrutturazioni: hero, calcolatore, recensioni, CTA. Griglia responsive, caricamenti rapidi, Lighthouse 95+."
+								data-desc="Одностраничник для ремонтной компании: герой, калькулятор, отзывы, CTA. Адаптивная сетка, быстрые загрузки, Lighthouse 95+."
+							>
+								<div class="card-img">
+									<span class="badge" data-i18n="badge_landing">Лендинг</span
+									><img
+										src="https://picsum.photos/seed/remontpro/800/450"
+										alt=""
+									/>
+								</div>
+								<div class="card-body">
+									<h3 class="title">Remont PRO</h3>
+									<div class="meta">
+										<span>Grid</span
+										><span data-i18n="tag_responsive">Адаптив</span
+										><span>SEO</span>
+									</div>
+								</div>
+								<div class="card-footer">
+									<button
+										type="button"
+										class="btn outline full"
+										onclick="openModal(this)"
+										data-i18n="card_details"
+									>
+										Подробнее
+									</button>
+								</div>
+							</article>
+
+							<!-- Project 2 -->
+							<article
+								class="card"
+								data-title-ru="CRM «OmoxLite» (MVP)"
+								data-title-it="CRM «OmoxLite» (MVP)"
+								data-title="CRM «OmoxLite» (MVP)"
+								data-img="https://picsum.photos/seed/omoxlite/1200/675"
+								data-tech-ru="Laravel, Blade, Eloquent, Auth"
+								data-tech-it="Laravel, Blade, Eloquent, Auth"
+								data-tech="Laravel, Blade, Eloquent, Auth"
+								data-desc-ru="Учебный MVP: клиенты, счета, статусы, оповещения. Архитектура модульная, код в GitHub."
+								data-desc-it="MVP didattico: clienti, fatture, stati, notifiche. Architettura modulare, codice su GitHub."
+								data-desc="Учебный MVP: клиенты, счета, статусы, оповещения. Архитектура модульная, код в GitHub."
+							>
+								<div class="card-img">
+									<span class="badge">MVP</span
+									><img
+										src="https://picsum.photos/seed/omoxlite/800/450"
+										alt=""
+									/>
+								</div>
+								<div class="card-body">
+									<h3 class="title">OmoxLite</h3>
+									<div class="meta">
+										<span>Laravel</span><span>Auth</span><span>REST</span>
+									</div>
+								</div>
+								<div class="card-footer">
+									<button
+										type="button"
+										class="btn outline full"
+										onclick="openModal(this)"
+										data-i18n="card_details"
+									>
+										Подробнее
+									</button>
+								</div>
+							</article>
+
+							<!-- Project 3 -->
+							<article
+								class="card"
+								data-title-ru="WP‑плагин «Калькулятор смет»"
+								data-title-it="Plugin WP «Calcolatore preventivi»"
+								data-title="WP‑плагин «Калькулятор смет»"
+								data-img="https://picsum.photos/seed/wpplugin/1200/675"
+								data-tech-ru="WordPress Plugin, Shortcode, AJAX"
+								data-tech-it="Plugin WordPress, shortcode, AJAX"
+								data-tech="WordPress Plugin, Shortcode, AJAX"
+								data-desc-ru="Плагин для расчёта стоимости работ: позиции, материалы, итого. Шорткод для вставки в страницы."
+								data-desc-it="Plugin per calcolare il costo dei lavori: voci, materiali, totale. Shortcode per l'inserimento nelle pagine."
+								data-desc="Плагин для расчёта стоимости работ: позиции, материалы, итого. Шорткод для вставки в страницы."
+							>
+								<div class="card-img">
+									<span class="badge" data-i18n="badge_wp">WP плагин</span
+									><img
+										src="https://picsum.photos/seed/wpplugin/800/450"
+										alt=""
+									/>
+								</div>
+								<div class="card-body">
+									<h3 class="title" data-i18n="card3_title">
+										Сметный калькулятор
+									</h3>
+									<div class="meta">
+										<span>AJAX</span><span>Shortcode</span><span>UX</span>
+									</div>
+								</div>
+								<div class="card-footer">
+									<button
+										type="button"
+										class="btn outline full"
+										onclick="openModal(this)"
+										data-i18n="card_details"
+									>
+										Подробнее
+									</button>
+								</div>
+							</article>
+
+							<!-- Project 4 -->
+							<article
+								class="card"
+								data-title-ru="Личный кабинет (Roadmap)"
+								data-title-it="Area personale (Roadmap)"
+								data-title="Личный кабинет (Roadmap)"
+								data-img="https://picsum.photos/seed/cabinet/1200/675"
+								data-tech-ru="Laravel + Vue/React (позже), Billing, ESXi API"
+								data-tech-it="Laravel + Vue/React (più tardi), Billing, ESXi API"
+								data-tech="Laravel + Vue/React (позже), Billing, ESXi API"
+								data-desc-ru="Roadmap: регистрация, тарифы, счета, автодоступ к VPS/хостингу. Старт с сервер‑сайда, фронт подключится позже."
+								data-desc-it="Roadmap: registrazione, piani, fatture, accesso automatico a VPS/hosting. Si parte dal server‑side, frontend in seguito."
+								data-desc="Roadmap: регистрация, тарифы, счета, автодоступ к VPS/хостингу. Старт с сервер‑сайда, фронт подключится позже."
+							>
+								<div class="card-img">
+									<span class="badge" data-i18n="badge_roadmap">Roadmap</span
+									><img
+										src="https://picsum.photos/seed/cabinet/800/450"
+										alt=""
+									/>
+								</div>
+								<div class="card-body">
+									<h3 class="title">Omoxsoft Cabinet</h3>
+									<div class="meta">
+										<span>Billing</span><span>CRUD</span><span>API</span>
+									</div>
+								</div>
+								<div class="card-footer">
+									<button
+										type="button"
+										class="btn outline full"
+										onclick="openModal(this)"
+										data-i18n="card_details"
+									>
+										Подробнее
+									</button>
+								</div>
+							</article>
+						</div>
+						<button
+							class="arrow next"
+							aria-label="Вперёд"
+							data-i18n-aria="aria_next"
+						>
+							▶
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- CONTACTS -->
+			<section class="section" id="contacts">
+				<div class="section-card">
+					<h2 data-i18n="contacts_title">Контакты</h2>
+					<p class="sub" data-i18n="contacts_sub">
+						Для проектов/сотрудничества.
+					</p>
+					<div class="grid">
+						<a
+							id="emailLink"
+							class="pill contact"
+							href="mailto:mekeidzerus@gmail.com"
+							aria-label="Email: mekeidzerus@gmail.com"
+						>
+							<span class="icon" aria-hidden="true">
+								<svg
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+									<path d="M3 7l9 6 9-6"></path>
+								</svg>
+							</span>
+							<span class="label"
+								><b>Email</b><span>mekeidzerus@gmail.com</span></span
+							>
+						</a>
+
+						<a
+							class="pill contact"
+							href="https://t.me/ruslanmekeidze"
+							target="_blank"
+							rel="noopener"
+							aria-label="Telegram: @RuslanMekeidze"
+						>
+							<span class="icon" aria-hidden="true">
+								<svg
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<polygon points="22 2 2 9 11 13 15 22 22 2"></polygon>
+									<line x1="22" y1="2" x2="11" y2="13"></line>
+								</svg>
+							</span>
+							<span class="label"
+								><b>Telegram</b><span>@RuslanMekeidze</span></span
+							>
+						</a>
+
+						<a
+							class="pill contact"
+							href="https://www.instagram.com/mekeidze_business_consulting/?igsh=MW53dXp5b2xtdnFheA%3D%3D&utm_source=qr#"
+							target="_blank"
+							rel="noopener"
+							aria-label="Instagram: @RuslanMekeidze"
+						>
+							<span class="icon" aria-hidden="true">
+								<svg
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<rect x="3" y="3" width="18" height="18" rx="4" ry="4"></rect>
+									<circle cx="12" cy="12" r="3.5"></circle>
+									<circle cx="17" cy="7" r="1"></circle>
+								</svg>
+							</span>
+							<span class="label"
+								><b>Instagram</b><span>@RuslanMekeidze</span></span
+							>
+						</a>
+
+						<a
+							class="pill contact"
+							href="https://github.com/mekeidzerus-dev"
+							target="_blank"
+							rel="noopener"
+							aria-label="GitHub: https://github.com/mekeidzerus-dev"
+						>
+							<span class="icon" aria-hidden="true">
+								<svg
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<polyline points="7 8 3 12 7 16"></polyline>
+									<polyline points="17 8 21 12 17 16"></polyline>
+								</svg>
+							</span>
+							<span class="label"
+								><b>GitHub</b><span>mekeidzerus-dev</span></span
+							>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<footer>© <span id="year"></span> Ruslan Mekeidze</footer>
+  </div>
+
+  <!-- MODAL -->
+		<div class="modal" id="modal">
+			<div class="modal-card">
+				<div class="modal-img">
+					<img id="mImg" alt="" />
+				</div>
+				<div class="modal-body">
+					<h3 id="mTitle"></h3>
+					<div class="tags" id="mTech"></div>
+					<div id="mDesc"></div>
+				</div>
+				<div class="modal-actions">
+					<a
+						id="mDemo"
+						class="btn"
+						href="#"
+						target="_blank"
+						data-i18n="modal_demo"
+						>Демо/GitHub</a
+					>
+					<button
+						class="btn close"
+						onclick="closeModal()"
+						data-i18n="modal_close"
+					>
+						Закрыть
+					</button>
+				</div>
+			</div>
+  </div>
+
+		<script src="js/i18n.js" defer></script>
+		<script src="js/header.js" defer></script>
+		<script src="js/carousel.js" defer></script>
+        <script src="js/cursor.js" defer></script>
+        <script src="js/modal.js" defer></script>
+	</body>
+</html>

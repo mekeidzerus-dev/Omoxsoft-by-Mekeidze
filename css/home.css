@@ -1,0 +1,8 @@
+@media (max-width: 720px){
+  .hero { grid-template-columns: 1fr; }
+  .hero .illus { justify-self: start; width:100%; height:auto; aspect-ratio: 13/9; border-radius:12px; }
+  .arrow.prev { left: 6px; }
+  .arrow.next { right: 6px; }
+  /* Skills: keep badges inline on mobile */
+  .two-col{ grid-template-columns: 1fr; }
+}
