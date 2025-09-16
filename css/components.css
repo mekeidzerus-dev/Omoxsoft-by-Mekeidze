@@ -125,10 +125,22 @@
 .skills-dots .dot{ width:8px; height:8px; border-radius:50%; background:#d0d7e1; }
 .skills-dots .dot.active{ background: var(--accent); }
 
+/* About card: force left column placement */
+.about-card{ grid-column: 1; }
+.about-card p{ line-height: 1.6; }
+
+/* Interest chips */
+.chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+.chip{ display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; background:#F2F5F8; border:1px solid #E6EBF2; color: var(--text); font-size:13px; }
+.chip .ico{ width:16px; height:16px; display:inline-flex; align-items:center; justify-content:center; }
+
 /* HORIZONTAL CAROUSEL */
 .carousel-wrap {
 	position: relative;
 }
+.proj-dots{ display:flex; gap:8px; justify-content:center; margin-top:10px; }
+.proj-dots .dot{ width:8px; height:8px; border-radius:50%; background:#d0d7e1; }
+.proj-dots .dot.active{ background: var(--accent); }
 .carousel {
 	display: grid;
 	grid-auto-flow: column;
@@ -258,6 +270,14 @@
 	font-weight: 700;
 	line-height: 1;
 }
+.modal-status {
+	display: inline-flex;
+	gap: 6px;
+	margin: 0 0 12px;
+}
+.status-app-active { background: var(--success); color: #fff; }
+.status-app-progress { background: var(--warning); color: #1f2430; }
+.status-app-planned { background: var(--muted); color: #fff; }
 .skill-text {
 	display: block;
 	line-height: 1.5;
@@ -339,11 +359,13 @@
 }
 .contact {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	gap: 12px;
+	gap: 10px;
 	color: inherit;
 	text-decoration: none;
 	transition: transform 0.12s ease, box-shadow 0.2s ease;
+	text-align: center;
 }
 .contact:hover {
 	transform: translateY(-1px);
@@ -356,7 +378,8 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	flex: 0 0 24px;
+	flex: 0 0 auto;
+	margin-bottom: 2px;
 }
 .icon svg {
 	width: 24px;
@@ -367,6 +390,8 @@
 	display: flex;
 	flex-direction: column;
 	line-height: 1.2;
+	align-items: center;
+	text-align: center;
 }
 .contact .label b {
 	margin: 0 0 2px;
@@ -431,8 +456,6 @@ footer {
 /* Print/PDF export adjustments */
 .cv-printing * { animation: none !important; }
 .cv-printing .toolbar,
-.cv-printing .cursor-bike,
-.cv-printing .smoke,
 .cv-printing .skills-dots,
 .cv-printing .xp-dots,
 .cv-printing .skills-slider-wrap .arrow,
@@ -496,14 +519,6 @@ footer {
 /* Show CV layout when printing to PDF (used off-screen clone) */
 .cv-printing .cv-root{ display:block; }
 
-/* Custom motorcycle cursor (desktop only) */
-@media (pointer: fine){
-  body.hide-native-cursor { cursor: none; }
-  .cursor-bike{ position:fixed; top:0; left:0; transform: translate(-50%, -50%); z-index:10000; pointer-events:none; font-size:28px; filter: drop-shadow(0 4px 8px rgba(0,0,0,.2)); will-change: transform; }
-  .cursor-bike.spin { transition: transform 120ms ease; }
-  .smoke{ position:fixed; width:6px; height:6px; border-radius:50%; background: rgba(120,130,140,.8); z-index:9999; pointer-events:none; animation: smokeFade .7s ease-out forwards; }
-  @keyframes smokeFade { 0%{ transform: translate(0,0) scale(.9); opacity:.9;} 60%{ transform: translate(-6px,-6px) scale(1.2); opacity:.35;} 100%{ transform: translate(-12px,-12px) scale(1.6); opacity:0;} }
-}
 .xp-viewport{ overflow:hidden; position:relative; }
 .xp-dots{ display:flex; gap:6px; justify-content:center; margin-top:8px; }
 .xp-dots .dot{ width:6px; height:6px; border-radius:50%; background:#cfd6df; }

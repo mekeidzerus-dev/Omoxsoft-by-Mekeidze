@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Генератор паролей</title>
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/components.css" />
+    <link rel="stylesheet" href="password.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="toolbar">
+        <a href="../../index.html" class="btn outline" id="backBtn">← <span data-i18n="back">Назад на главную</span></a>
+        <div style="margin-left:auto; display:flex; gap:8px; align-items:center;">
+          <button id="langToggle" class="btn lang-btn" aria-label="Switch language">IT</button>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="section-card">
+          <h2 id="pageTitle" data-i18n="title">Генератор паролей</h2>
+
+          <div class="pw-grid">
+            <!-- Настройки -->
+            <div class="pw-card">
+              <h3 data-i18n="settings">Настройки</h3>
+              <div class="pw-stack">
+                <div>
+                  <label for="len" data-i18n="length">Длина</label>
+                  <input id="len" type="number" min="4" max="64" value="12" />
+                  <div class="hint" data-i18n="lengthHelp">4–64 символов</div>
+                </div>
+                <div class="pw-cols" role="group" aria-labelledby="sets">
+                  <label class="checkbox"><input id="digits" type="checkbox" checked /><span data-i18n="digits">Цифры</span></label>
+                  <label class="checkbox"><input id="lower" type="checkbox" checked /><span data-i18n="lower">Строчные буквы</span></label>
+                  <label class="checkbox"><input id="upper" type="checkbox" checked /><span data-i18n="upper">Заглавные буквы</span></label>
+                  <label class="checkbox"><input id="symbols" type="checkbox" /><span data-i18n="symbols">Спецсимволы</span></label>
+                  <label class="checkbox"><input id="exclude" type="checkbox" /><span data-i18n="exclude">Исключить похожие</span></label>
+                </div>
+
+                <div class="pw-row">
+                  <button id="gen" class="btn primary" type="button" data-i18n="generate">Сгенерировать</button>
+                  <div class="pw-actions">
+                    <button id="copyAll" class="btn outline" type="button" data-i18n="copyAll">Скопировать все</button>
+                  </div>
+                </div>
+
+                <div class="strength">
+                  <div class="bar" id="strBar"><span></span></div>
+                  <div class="strength-text" id="strText"></div>
+                </div>
+
+                <div id="status" class="status" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <!-- Список паролей -->
+            <div class="pw-card">
+              <div class="pw-head">
+                <h3 class="muted" data-i18n="listTitle">Нажмите, чтобы скопировать</h3>
+                <span class="hint" id="listCount">10</span>
+              </div>
+              <div id="list" class="pw-list" role="list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Small note with links -->
+      <section class="section">
+        <div class="section-card">
+          <p class="hint note" id="note"></p>
+        </div>
+      </section>
+    </div>
+
+    <script src="password.js"></script>
+  </body>
+  </html>
