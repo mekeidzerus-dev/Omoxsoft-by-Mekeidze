@@ -57,6 +57,130 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   window.addEventListener('resize', ()=>{ rebuildDots(); setActive(); });
 })();
 
+// Project card galleries (multi-image preview inside each card)
+(function initCardGalleries(){
+  const containers = document.querySelectorAll('.card-img');
+  if(!containers.length) return;
+
+  const AUTOPLAY_DELAY = 4500;
+
+  containers.forEach(container => {
+    if(container.dataset.galleryInit === '1') return;
+    const images = Array.from(container.querySelectorAll('img'));
+    if(images.length <= 1) return;
+
+    container.dataset.galleryInit = '1';
+    const gallery = document.createElement('div');
+    gallery.className = 'card-gallery';
+    const track = document.createElement('div');
+    track.className = 'card-gallery-track';
+    gallery.appendChild(track);
+
+    const slides = images.map((img, index) => {
+      img.classList.add('card-gallery-slide');
+      if(!img.hasAttribute('loading')) img.loading = index === 0 ? 'eager' : 'lazy';
+      if(index === 0){
+        img.classList.add('is-active');
+        img.setAttribute('aria-hidden', 'false');
+      } else {
+        img.classList.remove('is-active');
+        img.setAttribute('aria-hidden', 'true');
+      }
+      track.appendChild(img);
+      return img;
+    });
+
+    const dotsWrap = document.createElement('div');
+    dotsWrap.className = 'card-gallery-dots';
+    const dots = slides.map((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'card-gallery-dot' + (i === 0 ? ' is-active' : '');
+      dot.setAttribute('aria-label', `Перейти к изображению ${i + 1} из ${slides.length}`);
+      dotsWrap.appendChild(dot);
+      return dot;
+    });
+
+    const prev = document.createElement('button');
+    prev.type = 'button';
+    prev.className = 'card-gallery-nav prev';
+    prev.setAttribute('aria-label', 'Предыдущее изображение');
+
+    const next = document.createElement('button');
+    next.type = 'button';
+    next.className = 'card-gallery-nav next';
+    next.setAttribute('aria-label', 'Следующее изображение');
+
+    gallery.append(prev, next, dotsWrap);
+    container.appendChild(gallery);
+
+    let index = 0;
+    let timer = null;
+
+    function setActive(target){
+      slides.forEach((img, i) => {
+        const active = i === target;
+        img.classList.toggle('is-active', active);
+        img.setAttribute('aria-hidden', active ? 'false' : 'true');
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === target);
+        dot.setAttribute('aria-pressed', i === target ? 'true' : 'false');
+      });
+      index = target;
+    }
+
+    function goTo(target){
+      const total = slides.length;
+      const nextIndex = ((target % total) + total) % total;
+      setActive(nextIndex);
+      restart();
+    }
+
+    function nextSlide(step){
+      goTo(index + (typeof step === 'number' ? step : 1));
+    }
+
+    function start(){
+      if(prefersReducedMotion.matches || slides.length <= 1) return;
+      stop();
+      timer = window.setInterval(() => nextSlide(1), AUTOPLAY_DELAY);
+    }
+
+    function stop(){
+      if(timer){
+        window.clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function restart(){
+      stop();
+      if(!prefersReducedMotion.matches){
+        start();
+      }
+    }
+
+    prev.addEventListener('click', () => nextSlide(-1));
+    next.addEventListener('click', () => nextSlide(1));
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => goTo(i));
+    });
+
+    container.addEventListener('mouseenter', stop);
+    container.addEventListener('mouseleave', start);
+    gallery.addEventListener('focusin', stop);
+    gallery.addEventListener('focusout', (event) => {
+      if(!gallery.contains(event.relatedTarget)){
+        start();
+      }
+    });
+
+    setActive(0);
+    start();
+  });
+})();
+
 // Vertical ticker for experience list (shows 5 items, scrolls up)
 (function initExperienceTicker(){
   const vp = document.querySelector('.xp-viewport');

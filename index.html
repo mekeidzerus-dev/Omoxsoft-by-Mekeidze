@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Портфолио — Руслан Мекеидзе</title>
+		<link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
 		<link rel="stylesheet" href="css/base.css" />
 		<link rel="stylesheet" href="css/components.css" />
 		<link rel="stylesheet" href="css/home.css" />
@@ -50,7 +51,7 @@
 					</div>
 				</div>
 				<div class="illus">
-					<img src="img/photo/3.PNG" alt="Ruslan Mekeidze" />
+					<img src="img/photo/3.webp" alt="Ruslan Mekeidze" />
 				</div>
 			</section>
 
@@ -629,10 +630,20 @@
 								data-status-it="Progetto attivo"
 							>
 								<div class="card-img">
-									<span class="badge" data-i18n="badge_landing">Лендинг</span
-									><img
+									<span class="badge" data-i18n="badge_landing">Лендинг</span>
+									<img
 										src="https://picsum.photos/seed/remontpro/800/450"
-										alt=""
+										alt="Превью лендинга Remont PRO"
+									/>
+									<img
+										src="https://picsum.photos/seed/remontpro-ui/800/450"
+										alt="Секция услуг лендинга Remont PRO"
+										loading="lazy"
+									/>
+									<img
+										src="https://picsum.photos/seed/remontpro-cta/800/450"
+										alt="Экран с CTA лендинга Remont PRO"
+										loading="lazy"
 									/>
 								</div>
 								<div class="card-body">
@@ -661,7 +672,7 @@
 								data-title-ru="Генератор паролей"
 								data-title-it="Generatore di password"
 								data-title="Генератор паролей"
-								data-img="img/projects passwords/1.png"
+								data-img="img/projects_password/2.webp"
 								data-tech-ru="JS, Crypto API, i18n"
 								data-tech-it="JS, Crypto API, i18n"
 								data-tech="JS, Crypto API, i18n"
@@ -674,8 +685,16 @@
 								data-status-it="Strumento attivo"
 							>
 								<div class="card-img">
-									<span class="badge" data-i18n="badge_tool">Инструмент</span
-									><img src="img/projects passwords/1.png" alt="" />
+									<span class="badge" data-i18n="badge_tool">Инструмент</span>
+									<img
+										src="img/projects_password/1.webp"
+										alt="Интерфейс генератора паролей"
+									/>
+									<img
+										src="img/projects_password/2.webp"
+										alt="Настройки генератора паролей"
+										loading="lazy"
+									/>
 								</div>
 								<div class="card-body">
 									<h3 class="title" data-i18n="pw_title">Password Generator</h3>
@@ -716,10 +735,20 @@
 								data-status-it="In sviluppo"
 							>
 								<div class="card-img">
-									<span class="badge">MVP</span
-									><img
+									<span class="badge">MVP</span>
+									<img
 										src="https://picsum.photos/seed/omoxlite/800/450"
-										alt=""
+										alt="Дашборд OmoxLite"
+									/>
+									<img
+										src="https://picsum.photos/seed/omoxlite-analytics/800/450"
+										alt="Список клиентов OmoxLite"
+										loading="lazy"
+									/>
+									<img
+										src="https://picsum.photos/seed/omoxlite-invoice/800/450"
+										alt="Форма счета OmoxLite"
+										loading="lazy"
 									/>
 								</div>
 								<div class="card-body">
@@ -758,10 +787,17 @@
 								data-status-it="Plugin attivo"
 							>
 								<div class="card-img">
-									<span class="badge" data-i18n="badge_wp">WP плагин</span
-									><img
-										src="https://picsum.photos/seed/wpplugin/800/450"
-										alt=""
+									<span class="badge" data-i18n="badge_wp">WP плагин</span>
+									<img src="img/cal.webp" alt="Интерфейс плагина смет" />
+									<img
+										src="img/cal 2.webp"
+										alt="Настройки плагина смет"
+										loading="lazy"
+									/>
+									<img
+										src="img/cal 2.webp"
+										alt="Результаты расчета в плагине"
+										loading="lazy"
 									/>
 								</div>
 								<div class="card-body">
@@ -802,10 +838,20 @@
 								data-status-it="In programma"
 							>
 								<div class="card-img">
-									<span class="badge" data-i18n="badge_roadmap">Roadmap</span
-									><img
+									<span class="badge" data-i18n="badge_roadmap">Roadmap</span>
+									<img
 										src="https://picsum.photos/seed/cabinet/800/450"
-										alt=""
+										alt="Превью личного кабинета Omoxsoft"
+									/>
+									<img
+										src="https://picsum.photos/seed/cabinet-pay/800/450"
+										alt="Страница тарифов кабинета Omoxsoft"
+										loading="lazy"
+									/>
+									<img
+										src="https://picsum.photos/seed/cabinet-access/800/450"
+										alt="Управление доступом в кабинете Omoxsoft"
+										loading="lazy"
 									/>
 								</div>
 								<div class="card-body">
@@ -941,7 +987,12 @@
 				</div>
 			</section>
 
-			<footer>© <span id="year"></span> Ruslan Mekeidze</footer>
+			<footer>
+				<span>© <span id="year"></span> Ruslan Mekeidze</span>
+				<span class="footer-version" id="siteVersion" aria-label="Версия сайта"
+					>v0000</span
+				>
+			</footer>
 		</div>
 
 		<!-- MODAL -->
@@ -984,6 +1035,7 @@
 			</div>
 		</div>
 
+		<script src="js/version.js" defer></script>
 		<script src="js/i18n.js" defer></script>
 		<script src="js/header.js" defer></script>
 		<script src="js/carousel.js" defer></script>
