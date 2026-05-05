@@ -7,7 +7,7 @@
   const versionEl = document.getElementById('siteVersion');
   if(!versionEl) return;
 
-  const releaseVersion = 'v2026.0505.1';
+  const releaseVersion = 'v2026.0505.2';
   versionEl.textContent = releaseVersion;
-  versionEl.setAttribute('title', 'Обновлено: проекты Fidaty Edilizia и Moti House');
+  versionEl.setAttribute('title', 'Обновлено: шапка, футер, услуги и быстрые действия');
 })();

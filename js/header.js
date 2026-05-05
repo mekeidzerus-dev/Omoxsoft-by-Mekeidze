@@ -22,6 +22,27 @@ function calcAge(date){
   if(yearEl) yearEl.textContent = new Date().getFullYear();
 })();
 
+(function initBackToTop(){
+  const btn = document.getElementById('backToTop');
+  if(!btn) return;
+
+  function sync(){
+    btn.classList.toggle('is-visible', window.scrollY > 520);
+  }
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  window.addEventListener('scroll', sync, { passive: true });
+  sync();
+})();
+
+(function disableFutureLinks(){
+  document.querySelectorAll('a[aria-disabled="true"]').forEach(link => {
+    link.addEventListener('click', event => event.preventDefault());
+  });
+})();
+
 // Match left about card height to education card on the right (best effort)
 (function syncAboutHeight(){
   const about = document.getElementById('aboutCard');

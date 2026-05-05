@@ -11,21 +11,44 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="toolbar">
-				<button
-					id="langToggle"
-					class="btn lang-btn"
-					aria-label="Switch language"
-				>
-					IT
-				</button>
-			</div>
+			<header class="site-header" id="top">
+				<a class="brand" href="#top" aria-label="OmoxSoft by Mekeidze">
+					<span class="brand-mark">OM</span>
+					<span class="brand-text"
+						><strong>OmoxSoft</strong><span>by Mekeidze</span></span
+					>
+				</a>
+				<nav class="main-nav" aria-label="Основная навигация">
+					<a href="#services" data-i18n="nav_services">Услуги</a>
+					<a href="#projects" data-i18n="nav_projects">Проекты</a>
+					<a href="#skills" data-i18n="nav_skills">Опыт</a>
+					<a href="#contacts" data-i18n="nav_contacts">Контакты</a>
+				</nav>
+				<div class="header-actions">
+					<a
+						class="btn header-cta"
+						href="https://wa.me/message/CM2DWWNH5BNFA1"
+						target="_blank"
+						rel="noopener"
+						data-i18n="nav_cta"
+						>Обсудить сайт</a
+					>
+					<button
+						id="langToggle"
+						class="btn lang-btn"
+						aria-label="Switch language"
+					>
+						IT
+					</button>
+				</div>
+			</header>
 			<!-- HERO -->
 			<section class="hero">
 				<div>
 					<h1 data-i18n="hero_name">Руслан Мекеидзе</h1>
 					<p data-i18n="hero_subtitle">
-						Предприниматель • обучающийся веб‑разработчик • бизнес‑консультант
+						Сайты и веб‑приложения для бизнеса в Италии: аккуратная подача,
+						быстрый запуск, заявки из Google, Instagram и WhatsApp.
 					</p>
 					<div class="meta">
 						<span
@@ -42,16 +65,103 @@
 						>
 					</div>
 					<div class="cta">
-						<button id="cvBtn" class="btn primary" data-i18n="btn_cv">
+						<a
+							class="btn primary"
+							href="https://wa.me/message/CM2DWWNH5BNFA1"
+							target="_blank"
+							rel="noopener"
+							data-i18n="btn_discuss"
+							>Обсудить проект</a
+						>
+						<a class="btn ghost" href="#projects" data-i18n="btn_projects"
+							>Смотреть проекты</a
+						>
+						<button id="cvBtn" class="btn ghost" data-i18n="btn_cv">
 							Скачать CV
 						</button>
-						<a class="btn ghost" href="#contacts" data-i18n="btn_contacts"
-							>Контакты</a
-						>
 					</div>
 				</div>
 				<div class="illus">
 					<img src="img/photo/3.webp" alt="Ruslan Mekeidze" />
+				</div>
+			</section>
+
+			<!-- SERVICES -->
+			<section class="section" id="services">
+				<div class="section-card services-card">
+					<div class="section-head">
+						<div>
+							<h2 data-i18n="services_title">
+								Сайты и приложения для малого бизнеса в Италии
+							</h2>
+							<p class="sub" data-i18n="services_sub">
+								Фокус на понятном оффере, локальном доверии, заявках и
+								дальнейшем развитии проекта без лишней сложности.
+							</p>
+						</div>
+						<a
+							class="btn outline"
+							href="https://wa.me/message/CM2DWWNH5BNFA1"
+							target="_blank"
+							rel="noopener"
+							data-i18n="services_cta"
+							>Получить консультацию</a
+						>
+					</div>
+					<div class="service-grid">
+						<article class="service-item">
+							<span class="service-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24">
+									<rect x="3" y="4" width="18" height="14" rx="2"></rect>
+									<path d="M7 20h10M9 16h6"></path>
+								</svg>
+							</span>
+							<h3 data-i18n="service_site_title">Корпоративные сайты</h3>
+							<p data-i18n="service_site_text">
+								Структура, тексты, адаптивная верстка, контакты, карта,
+								WhatsApp и базовая SEO‑подготовка.
+							</p>
+						</article>
+						<article class="service-item">
+							<span class="service-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24">
+									<path d="M6 4h12v16H6z"></path>
+									<path d="M9 8h6M9 12h6M9 16h3"></path>
+								</svg>
+							</span>
+							<h3 data-i18n="service_app_title">Веб‑приложения</h3>
+							<p data-i18n="service_app_text">
+								Личные кабинеты, формы заявок, калькуляторы, мини‑CRM и
+								внутренние инструменты.
+							</p>
+						</article>
+						<article class="service-item">
+							<span class="service-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24">
+									<path d="M4 7h16l-2 12H6L4 7z"></path>
+									<path d="M8 7a4 4 0 0 1 8 0"></path>
+								</svg>
+							</span>
+							<h3 data-i18n="service_shop_title">Каталоги и e‑commerce</h3>
+							<p data-i18n="service_shop_text">
+								Витрины товаров, карточки, заявки, интеграция с соцсетями и
+								подготовка к продажам.
+							</p>
+						</article>
+						<article class="service-item">
+							<span class="service-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24">
+									<path d="M12 3v18M5 8h14M7 16h10"></path>
+									<circle cx="12" cy="12" r="3"></circle>
+								</svg>
+							</span>
+							<h3 data-i18n="service_growth_title">Поддержка и рост</h3>
+							<p data-i18n="service_growth_text">
+								Доработки, аналитика, улучшение скорости, новые страницы и
+								автоматизация рутинных процессов.
+							</p>
+						</article>
+					</div>
 				</div>
 			</section>
 
@@ -900,12 +1010,121 @@
 				</div>
 			</section>
 
-			<footer>
-				<span>© <span id="year"></span> Ruslan Mekeidze</span>
-				<span class="footer-version" id="siteVersion" aria-label="Версия сайта"
-					>v0000</span
-				>
+			<footer class="site-footer">
+				<div class="footer-main">
+					<div class="footer-brand">
+						<a class="brand" href="#top" aria-label="OmoxSoft by Mekeidze">
+							<span class="brand-mark">OM</span>
+							<span class="brand-text"
+								><strong>OmoxSoft</strong><span>by Mekeidze</span></span
+							>
+						</a>
+						<p data-i18n="footer_text">
+							Персональное портфолио и точка входа для сайтов, приложений и
+							цифровых проектов в Италии.
+						</p>
+					</div>
+					<div class="footer-links">
+						<div class="footer-group">
+							<h3 data-i18n="footer_group_site">Сайт</h3>
+							<a href="#services" data-i18n="nav_services">Услуги</a>
+							<a href="#projects" data-i18n="nav_projects">Проекты</a>
+							<a href="#contacts" data-i18n="nav_contacts">Контакты</a>
+						</div>
+						<div class="footer-group">
+							<h3 data-i18n="footer_group_future">Будущие страницы</h3>
+							<a href="#" aria-disabled="true" data-i18n="footer_future_blog"
+								>Блог</a
+							>
+							<a href="#" aria-disabled="true" data-i18n="footer_future_cases"
+								>Кейсы</a
+							>
+							<a href="#" aria-disabled="true" data-i18n="footer_future_services"
+								>Услуги</a
+							>
+							<a href="#" aria-disabled="true" data-i18n="footer_future_tools"
+								>Инструменты</a
+							>
+						</div>
+						<div class="footer-group">
+							<h3 data-i18n="footer_group_social">Соцсети</h3>
+							<a
+								href="https://t.me/ruslanmekeidze"
+								target="_blank"
+								rel="noopener"
+								>Telegram</a
+							>
+							<a
+								href="https://www.instagram.com/mekeidze_business_consulting/?igsh=MW53dXp5b2xtdnFheA%3D%3D&utm_source=qr#"
+								target="_blank"
+								rel="noopener"
+								>Instagram</a
+							>
+							<a
+								href="https://wa.me/message/CM2DWWNH5BNFA1"
+								target="_blank"
+								rel="noopener"
+								>WhatsApp</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<span>© <span id="year"></span> Ruslan Mekeidze</span>
+					<a href="tel:+393805871361">+39 380 587 1361</a>
+					<span
+						class="footer-version"
+						id="siteVersion"
+						aria-label="Версия сайта"
+						>v0000</span
+					>
+				</div>
 			</footer>
+		</div>
+
+		<div class="floating-actions" aria-label="Быстрые действия">
+			<a
+				href="https://wa.me/message/CM2DWWNH5BNFA1"
+				target="_blank"
+				rel="noopener"
+				aria-label="WhatsApp"
+			>
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path
+						d="M5.2 18.9 6 15.7a7.4 7.4 0 1 1 2.8 2.6l-3.6.6z"
+					></path>
+					<path d="M9.4 8.7c.2 3 2.4 5.1 5.5 5.8l1.2-1.2"></path>
+				</svg>
+			</a>
+			<a
+				href="https://t.me/ruslanmekeidze"
+				target="_blank"
+				rel="noopener"
+				aria-label="Telegram"
+			>
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M22 3 3 10.4l7.4 2.7L14 20l8-17z"></path>
+					<path d="M10.4 13.1 22 3"></path>
+				</svg>
+			</a>
+			<a
+				href="https://www.instagram.com/mekeidze_business_consulting/?igsh=MW53dXp5b2xtdnFheA%3D%3D&utm_source=qr#"
+				target="_blank"
+				rel="noopener"
+				aria-label="Instagram"
+			>
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<rect x="4" y="4" width="16" height="16" rx="5"></rect>
+					<circle cx="12" cy="12" r="3.4"></circle>
+					<circle cx="17" cy="7" r="1"></circle>
+				</svg>
+			</a>
+			<button type="button" id="backToTop" aria-label="Наверх">
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M12 19V5"></path>
+					<path d="m6 11 6-6 6 6"></path>
+				</svg>
+			</button>
 		</div>
 
 		<!-- MODAL -->

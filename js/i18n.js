@@ -6,6 +6,11 @@ const i18n = {
 	ru: {
 		hero_name: 'Руслан Мекеидзе',
 		title_page: 'Портфолио — Руслан Мекеидзе',
+		nav_services: 'Услуги',
+		nav_projects: 'Проекты',
+		nav_skills: 'Опыт',
+		nav_contacts: 'Контакты',
+		nav_cta: 'Обсудить сайт',
 		status_basic: 'Базовый',
 		status_progress: 'В процессе',
 		status_next: 'Следующий к изучению',
@@ -13,13 +18,31 @@ const i18n = {
 		email_subject: 'Запрос с сайта',
 		email_body: 'Здравствуйте, Руслан! Хочу обсудить сотрудничество. ',
 		hero_subtitle:
-			'Предприниматель • обучающийся веб‑разработчик • бизнес‑консультант',
+			'Сайты и веб‑приложения для бизнеса в Италии: аккуратная подача, быстрый запуск, заявки из Google, Instagram и WhatsApp.',
 		label_birth: 'День рождения:',
 		label_age: 'Возраст:',
 		label_location: 'Локация:',
 		value_location: 'Италия',
+		btn_discuss: 'Обсудить проект',
+		btn_projects: 'Смотреть проекты',
 		btn_cv: 'Скачать CV',
 		btn_contacts: 'Контакты',
+		services_title: 'Сайты и приложения для малого бизнеса в Италии',
+		services_sub:
+			'Фокус на понятном оффере, локальном доверии, заявках и дальнейшем развитии проекта без лишней сложности.',
+		services_cta: 'Получить консультацию',
+		service_site_title: 'Корпоративные сайты',
+		service_site_text:
+			'Структура, тексты, адаптивная верстка, контакты, карта, WhatsApp и базовая SEO‑подготовка.',
+		service_app_title: 'Веб‑приложения',
+		service_app_text:
+			'Личные кабинеты, формы заявок, калькуляторы, мини‑CRM и внутренние инструменты.',
+		service_shop_title: 'Каталоги и e‑commerce',
+		service_shop_text:
+			'Витрины товаров, карточки, заявки, интеграция с соцсетями и подготовка к продажам.',
+		service_growth_title: 'Поддержка и рост',
+		service_growth_text:
+			'Доработки, аналитика, улучшение скорости, новые страницы и автоматизация рутинных процессов.',
 		skills_title: 'Навыки и планируемый опыт',
 		skills_sub:
 			'Честно: без выдумки. Отмечено, что уже делаю, и что в процессе.',
@@ -57,6 +80,15 @@ const i18n = {
 		note_ig: 'Instagram',
 		contacts_title: 'Контакты',
 		contacts_sub: 'Для проектов/сотрудничества.',
+		footer_text:
+			'Персональное портфолио и точка входа для сайтов, приложений и цифровых проектов в Италии.',
+		footer_group_site: 'Сайт',
+		footer_group_future: 'Будущие страницы',
+		footer_group_social: 'Соцсети',
+		footer_future_blog: 'Блог',
+		footer_future_cases: 'Кейсы',
+		footer_future_services: 'Услуги',
+		footer_future_tools: 'Инструменты',
 		modal_open_app: 'Открыть проект',
 		modal_close: 'Закрыть',
 		aria_prev: 'Назад',
@@ -109,6 +141,11 @@ const i18n = {
 	it: {
 		hero_name: 'Ruslan Mekeidze',
 		title_page: 'Portfolio — Ruslan Mekeidze',
+		nav_services: 'Servizi',
+		nav_projects: 'Progetti',
+		nav_skills: 'Esperienza',
+		nav_contacts: 'Contatti',
+		nav_cta: 'Parliamo del sito',
 		status_basic: 'Basic',
 		status_progress: 'In corso',
 		status_next: 'Prossimo da studiare',
@@ -116,13 +153,31 @@ const i18n = {
 		email_subject: 'Richiesta dal sito',
 		email_body: 'Ciao, Ruslan! Vorrei discutere una collaborazione. ',
 		hero_subtitle:
-			'Imprenditore • sviluppatore web in formazione • consulente aziendale',
+			'Siti web e web app per aziende in Italia: presentazione curata, lancio rapido, richieste da Google, Instagram e WhatsApp.',
 		label_birth: 'Data di nascita:',
 		label_age: 'Età:',
 		label_location: 'Posizione:',
 		value_location: 'Italia',
+		btn_discuss: 'Parliamo del progetto',
+		btn_projects: 'Vedi progetti',
 		btn_cv: 'Scarica CV',
 		btn_contacts: 'Contatti',
+		services_title: 'Siti e applicazioni per piccole imprese in Italia',
+		services_sub:
+			'Focus su offerta chiara, fiducia locale, richieste di contatto e crescita del progetto senza complessità inutile.',
+		services_cta: 'Richiedi consulenza',
+		service_site_title: 'Siti aziendali',
+		service_site_text:
+			'Struttura, testi, layout responsive, contatti, mappa, WhatsApp e preparazione SEO di base.',
+		service_app_title: 'Web app',
+		service_app_text:
+			'Aree riservate, moduli richiesta, calcolatori, mini‑CRM e strumenti interni.',
+		service_shop_title: 'Cataloghi ed e‑commerce',
+		service_shop_text:
+			'Vetrine prodotto, schede, richieste, integrazione social e preparazione alla vendita.',
+		service_growth_title: 'Supporto e crescita',
+		service_growth_text:
+			'Migliorie, analytics, velocità, nuove pagine e automazione dei processi ripetitivi.',
 		skills_title: 'Competenze ed esperienza pianificata',
 		skills_sub:
 			'Onestamente, senza esagerazioni. Segnato ciò che sto già facendo e ciò che è in corso.',
@@ -160,6 +215,15 @@ const i18n = {
 		note_ig: 'Instagram',
 		contacts_title: 'Contatti',
 		contacts_sub: 'Per progetti/collaborazioni.',
+		footer_text:
+			'Portfolio personale e punto di ingresso per siti, applicazioni e progetti digitali in Italia.',
+		footer_group_site: 'Sito',
+		footer_group_future: 'Pagine future',
+		footer_group_social: 'Social',
+		footer_future_blog: 'Blog',
+		footer_future_cases: 'Casi studio',
+		footer_future_services: 'Servizi',
+		footer_future_tools: 'Strumenti',
 		modal_open_app: 'Apri progetto',
 		modal_close: 'Chiudi',
 		aria_prev: 'Indietro',
