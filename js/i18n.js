@@ -6,6 +6,7 @@ const i18n = {
 	ru: {
 		hero_name: 'Руслан Мекеидзе',
 		title_page: 'Портфолио — Руслан Мекеидзе',
+		nav_home: 'Главная',
 		nav_services: 'Услуги',
 		nav_projects: 'Проекты',
 		nav_skills: 'Опыт',
@@ -87,7 +88,6 @@ const i18n = {
 		footer_group_social: 'Соцсети',
 		footer_future_blog: 'Блог',
 		footer_future_cases: 'Кейсы',
-		footer_future_services: 'Услуги',
 		footer_future_tools: 'Инструменты',
 		modal_open_app: 'Открыть проект',
 		modal_close: 'Закрыть',
@@ -142,6 +142,7 @@ const i18n = {
 	it: {
 		hero_name: 'Ruslan Mekeidze',
 		title_page: 'Portfolio — Ruslan Mekeidze',
+		nav_home: 'Home',
 		nav_services: 'Servizi',
 		nav_projects: 'Progetti',
 		nav_skills: 'Esperienza',
@@ -223,7 +224,6 @@ const i18n = {
 		footer_group_social: 'Social',
 		footer_future_blog: 'Blog',
 		footer_future_cases: 'Casi studio',
-		footer_future_services: 'Servizi',
 		footer_future_tools: 'Strumenti',
 		modal_open_app: 'Apri progetto',
 		modal_close: 'Chiudi',
