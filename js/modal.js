@@ -7,9 +7,48 @@
   const mDesc  = document.getElementById('mDesc');
   const mStatus = document.getElementById('mStatus');
   const mImg   = document.getElementById('mImg');
+  const mImageFrame = modal.querySelector('.modal-img');
   const mDemo  = document.getElementById('mDemo');
   const focusableSel = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
   let lastActive = null;
+
+  const previews = {
+    fidaty: `
+      <div class="project-preview fidaty-preview modal-preview" role="img" aria-label="FIDATY EDILIZIA preview">
+        <div class="preview-browser" aria-hidden="true">
+          <div class="preview-topbar"><span></span><span></span><span></span><strong>fidatyedilizia.it</strong></div>
+          <div class="preview-hero">
+            <div class="preview-kicker">Bagni chiavi in mano</div>
+            <div class="preview-title">FIDATY EDILIZIA</div>
+            <div class="preview-lines"><i></i><i></i><i></i></div>
+          </div>
+          <div class="preview-grid"><i></i><i></i><i></i></div>
+        </div>
+      </div>`,
+    moti: `
+      <div class="project-preview moti-preview modal-preview" role="img" aria-label="Moti House preview">
+        <div class="preview-browser" aria-hidden="true">
+          <div class="preview-topbar"><span></span><span></span><span></span><strong>motihouse.com</strong></div>
+          <div class="preview-hero">
+            <div class="preview-kicker">Japanese desserts</div>
+            <div class="preview-title">Moti House</div>
+            <div class="preview-lines"><i></i><i></i><i></i></div>
+          </div>
+          <div class="preview-products"><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>`,
+    password: `
+      <div class="project-preview password-preview modal-preview" role="img" aria-label="Password generator preview">
+        <div class="preview-browser" aria-hidden="true">
+          <div class="preview-topbar"><span></span><span></span><span></span><strong>Password Generator</strong></div>
+          <div class="preview-tool">
+            <div class="preview-password">K9#rV2!mQ8</div>
+            <div class="preview-slider"><i></i></div>
+            <div class="preview-checks"><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>`
+  };
 
   function visibleFocusable(){
     return Array.from(modal.querySelectorAll(focusableSel)).filter(el => el.offsetParent !== null && !el.hasAttribute('aria-hidden'));
@@ -61,8 +100,17 @@
       }
       if(label){ mStatus.hidden = false; } else { mStatus.hidden = true; }
     }
+    const preview = card.dataset.preview;
     const img = card.dataset.img;
-    if(mImg){ if(img) mImg.src = img; else mImg.removeAttribute('src'); }
+    if(mImageFrame && preview && previews[preview]){
+      mImageFrame.innerHTML = previews[preview];
+    } else if(mImageFrame){
+      mImageFrame.innerHTML = '<img id="mImg" alt="" />';
+      const nextImg = document.getElementById('mImg');
+      if(nextImg && img) nextImg.src = img;
+    } else if(mImg){
+      if(img) mImg.src = img; else mImg.removeAttribute('src');
+    }
     if(mDemo) mDemo.href = card.dataset.demo || '#';
     lastActive = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     modal.classList.add('open');
@@ -80,6 +128,9 @@
       mStatus.hidden = true;
       mStatus.textContent = '';
       mStatus.className = 'status-badge modal-status';
+    }
+    if(mImageFrame){
+      mImageFrame.innerHTML = '<img id="mImg" alt="" />';
     }
     if(lastActive && typeof lastActive.focus === 'function'){ lastActive.focus(); }
   }
