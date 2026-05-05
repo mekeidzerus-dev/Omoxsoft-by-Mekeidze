@@ -88,7 +88,7 @@
       const status = card.dataset.status || '';
       const lang = (window.currentLang || 'ru').split('-')[0];
       const statusKey = lang === 'it' ? 'statusIt' : lang === 'en' ? 'statusEn' : 'statusRu';
-      const label = card.dataset.statusLabel || card.dataset[statusKey] || card.dataset.statusRu || '';
+      const label = card.dataset.statusLabel || card.dataset[statusKey] || card.dataset.statusRu || card.dataset.statusIt || '';
       mStatus.textContent = label || '';
       mStatus.className = 'status-badge modal-status';
       if(status){

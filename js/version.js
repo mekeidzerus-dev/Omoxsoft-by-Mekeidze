@@ -7,7 +7,7 @@
   const versionEl = document.getElementById('siteVersion');
   if(!versionEl) return;
 
-  const releaseVersion = 'v2026.0505.2';
+  const releaseVersion = 'v2026.0505.3';
   versionEl.textContent = releaseVersion;
-  versionEl.setAttribute('title', 'Обновлено: шапка, футер, услуги и быстрые действия');
+  versionEl.setAttribute('title', 'Обновлено: SEO-страница creazione siti web in Italia');
 })();

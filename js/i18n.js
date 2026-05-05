@@ -25,7 +25,6 @@ const i18n = {
 		value_location: 'Италия',
 		btn_discuss: 'Обсудить проект',
 		btn_projects: 'Смотреть проекты',
-		btn_cv: 'Скачать CV',
 		btn_contacts: 'Контакты',
 		services_title: 'Сайты и приложения для малого бизнеса в Италии',
 		services_sub:
@@ -43,27 +42,28 @@ const i18n = {
 		service_growth_title: 'Поддержка и рост',
 		service_growth_text:
 			'Доработки, аналитика, улучшение скорости, новые страницы и автоматизация рутинных процессов.',
-		skills_title: 'Навыки и планируемый опыт',
+		skills_title: 'Навыки и рабочий уровень',
 		skills_sub:
-			'Честно: без выдумки. Отмечено, что уже делаю, и что в процессе.',
+			'Практический уровень по ключевым направлениям сейчас держится в диапазоне 60–80%.',
 		about_title: 'Обо мне',
 		about_sub:
 			'Веб-разработчик и бизнес-консультант, советник международных компаний, увлечён будущим ИИ и цифровых технологий.',
 		about_body:
 			'Предпринимательский бэкграунд, системное мышление и фокус на практических результатах. Люблю аккуратные интерфейсы, понятную структуру данных и продуманный пользовательский сценарий. Ценыю прозрачность, предсказуемые сроки и уважение к деталям.',
 		skill_html:
-			'HTML & CSS уровень: базовый → уверенный (в процессе). Семантика, адаптив, гриды, флексы.',
+			'HTML & CSS: семантика, адаптивная сетка, flex/grid, карточки, модальные окна, responsive‑проверка и аккуратная верстка под реальные бизнес‑страницы.',
 		skill_js:
-			'JavaScript основы: DOM, события, fetch. Дальше: модули, компоненты, карусели, модалки.',
+			'JavaScript: DOM, события, карусели, модалки, i18n, плавные действия интерфейса и небольшие инструменты для пользователей.',
 		skill_ai:
-			'Искусственный интеллект (AI/ML): LLM (GPT), промпт‑инжиниринг, embeddings, RAG, LangChain, векторные БД (FAISS/Pinecone), OpenAI API, Hugging Face, Stable Diffusion.',
+			'Искусственный интеллект: GPT, промпт‑инжиниринг, структура контента, анализ, автоматизация рутины, подготовка SEO‑текстов и сценариев для сайтов.',
 		skill_laravel:
-			'Laravel план: MVC, маршруты, Blade, Eloquent. Цель: MVP личного кабинета.',
-		skill_git: 'Git & GitHub ветки, pull‑requests, issues. CI позже.',
+			'Laravel: MVC‑логика, маршруты, Blade, базовая работа с данными и подготовка фундамента для личных кабинетов, форм и внутренних web‑приложений.',
+		skill_git:
+			'Git & GitHub: ветки, коммиты, публикация изменений, GitHub Actions для деплоя и контроль версий проекта.',
 		skill_cms:
-			'CMS: WordPress, Joomla, Drupal — установка, темы, плагины, безопасность. Цель: быстрый корпоративный сайт/блог.',
+			'CMS: WordPress, структура страниц, темы, базовые интеграции, безопасность, быстрый запуск корпоративных сайтов, каталогов и блогов.',
 		skill_uiux:
-			'UI/UX + библиотеки: React, Vue, Tailwind, MUI; дизайн‑системы и паттерны интерфейсов.',
+			'UI/UX: логика первого экрана, CTA, сетка, отступы, карточки, мобильная версия, визуальный маршрут клиента и понятная структура страницы.',
 		level_advanced: 'Продвинутый',
 		projects_title: 'Проекты',
 		projects_sub:
@@ -101,16 +101,16 @@ const i18n = {
 			'Пока текст‑рыба: краткое описание текущих задач и интересов. В будущем этот блок можно расширить под историю работы, достижения и ссылки на проекты.',
 		exp_current_title: 'Текущая работа',
 		exp_status: 'Статус:',
-		exp_status_value: 'Открыт к предложениям',
-		exp_status_open: 'Открыт к предложениям',
-		exp_status_label: 'Статус работы:',
+		exp_status_value: 'Работаю как Ditta Individuale',
+		exp_status_open: 'Работаю как Ditta Individuale',
+		exp_status_label: 'Статус:',
 		exp_status_busy: 'Участвую в проекте',
 		exp_list_title: 'Опыт',
 		exp_item1:
 			'Рыба текст: интерфейсы, адаптивная верстка, оптимизация загрузки.',
 		exp_item2: 'Рыба текст: базовые плагины и темы WordPress.',
 		exp_item3: 'Рыба текст: карусели, модальные окна, i18n.',
-		exp_work_title: 'Опыт работы',
+		exp_work_title: 'Текущая работа — Ditta Individuale',
 		edu_title: 'Образование',
 		edu_study: 'В процессе обучения — SKILLBOX',
 		edu_college:
@@ -134,7 +134,8 @@ const i18n = {
 		xp6_title: 'R&D/Design — Monsummano Terme (advertising design)',
 		xp6_place: 'Италия, Monsummano Terme',
 		xp6_time: '2023–2024',
-		xp7_title: 'Project Manager — Alia Edilizia SRL, Punto Infissi',
+		xp7_title:
+			'Ditta Individuale — сайты, web‑проекты и бизнес‑консультации',
 		xp7_place: 'Италия',
 		xp7_time: '2024 — по наст. время',
 	},
@@ -160,7 +161,6 @@ const i18n = {
 		value_location: 'Italia',
 		btn_discuss: 'Parliamo del progetto',
 		btn_projects: 'Vedi progetti',
-		btn_cv: 'Scarica CV',
 		btn_contacts: 'Contatti',
 		services_title: 'Siti e applicazioni per piccole imprese in Italia',
 		services_sub:
@@ -178,27 +178,28 @@ const i18n = {
 		service_growth_title: 'Supporto e crescita',
 		service_growth_text:
 			'Migliorie, analytics, velocità, nuove pagine e automazione dei processi ripetitivi.',
-		skills_title: 'Competenze ed esperienza pianificata',
+		skills_title: 'Competenze e livello operativo',
 		skills_sub:
-			'Onestamente, senza esagerazioni. Segnato ciò che sto già facendo e ciò che è in corso.',
+			'Il livello pratico nelle aree principali è oggi tra il 60% e l’80%.',
 		about_title: 'Su di me',
 		about_sub:
 			'Sviluppatore web e consulente aziendale, advisor per imprese internazionali, appassionato del futuro dell’IA e delle tecnologie digitali.',
 		about_body:
 			'Background imprenditoriale, pensiero sistemico e orientamento ai risultati pratici. Amo le interfacce pulite, strutture dati chiare e percorsi utente ben progettati. Valuto trasparenza, scadenze prevedibili e cura dei dettagli.',
 		skill_html:
-			'HTML & CSS livello: base → sicuro (in corso). Semantica, responsive, grid, flex.',
+			'HTML & CSS: semantica, griglie responsive, flex/grid, card, modali, verifica mobile e layout puliti per pagine business reali.',
 		skill_js:
-			'JavaScript basi: DOM, eventi, fetch. Poi: moduli, componenti, carousel, modali.',
+			'JavaScript: DOM, eventi, carousel, modali, i18n, micro‑interazioni e piccoli strumenti utili per gli utenti.',
 		skill_ai:
-			'Intelligenza artificiale (AI/ML): LLM (GPT), prompt engineering, embeddings, RAG, LangChain, database vettoriali (FAISS/Pinecone), OpenAI API, Hugging Face, Stable Diffusion.',
+			'Intelligenza artificiale: GPT, prompt engineering, struttura dei contenuti, analisi, automazione, testi SEO e scenari per siti web.',
 		skill_laravel:
-			'Laravel piano: MVC, rotte, Blade, Eloquent. Obiettivo: MVP area personale.',
-		skill_git: 'Git & GitHub branch, pull request, issue. CI più tardi.',
+			'Laravel: logica MVC, rotte, Blade, basi dati e fondazioni per aree riservate, form e web app interne.',
+		skill_git:
+			'Git & GitHub: branch, commit, pubblicazione delle modifiche, GitHub Actions per il deploy e controllo versione.',
 		skill_cms:
-			'CMS: WordPress, Joomla, Drupal — installazione, temi, plugin, sicurezza. Obiettivo: sito aziendale/blog veloce.',
+			'CMS: WordPress, struttura pagine, temi, integrazioni di base, sicurezza e lancio rapido di siti aziendali, cataloghi e blog.',
 		skill_uiux:
-			'UI/UX + librerie: React, Vue, Tailwind, MUI; design system e pattern di interfaccia.',
+			'UI/UX: logica del primo schermo, CTA, griglia, spaziature, card, versione mobile, percorso visivo del cliente e struttura chiara della pagina.',
 		level_advanced: 'Avanzato',
 		projects_title: 'Progetti',
 		projects_sub:
@@ -236,16 +237,16 @@ const i18n = {
 			'Testo segnaposto: breve descrizione delle attività e degli interessi attuali. In futuro questo blocco potrà essere ampliato con la storia lavorativa, risultati e link ai progetti.',
 		exp_current_title: 'Lavoro attuale',
 		exp_status: 'Stato:',
-		exp_status_value: 'Aperto a proposte',
-		exp_status_open: 'Aperto a proposte',
-		exp_status_label: 'Stato lavorativo:',
+		exp_status_value: 'Lavoro come Ditta Individuale',
+		exp_status_open: 'Lavoro come Ditta Individuale',
+		exp_status_label: 'Stato:',
 		exp_status_busy: 'Partecipo a un progetto',
 		exp_list_title: 'Esperienza',
 		exp_item1:
 			'Segnaposto: interfacce, responsive design, ottimizzazione del caricamento.',
 		exp_item2: 'Segnaposto: plugin e temi WordPress di base.',
 		exp_item3: 'Segnaposto: caroselli, modali, i18n.',
-		exp_work_title: 'Esperienza lavorativa',
+		exp_work_title: 'Lavoro attuale — Ditta Individuale',
 		edu_title: 'Istruzione',
 		edu_study: 'In corso — SKILLBOX',
 		edu_college:
@@ -269,7 +270,8 @@ const i18n = {
 		xp6_title: 'R&D/Design — Monsummano Terme (advertising design)',
 		xp6_place: 'Italia, Monsummano Terme',
 		xp6_time: '2023–2024',
-		xp7_title: 'Project Manager — Alia Edilizia SRL, Punto Infissi',
+		xp7_title:
+			'Ditta Individuale — siti web, progetti web e consulenza business',
 		xp7_place: 'Italia',
 		xp7_time: '2024 — presente',
 	},
@@ -321,22 +323,6 @@ function applyI18n(lang) {
 
 // Wire UI events
 window.addEventListener('DOMContentLoaded', () => {
-	const cvBtn = document.getElementById('cvBtn')
-	if (cvBtn) {
-		cvBtn.addEventListener('click', () => {
-			const cleanup = () => document.body.classList.remove('cv-printing')
-			try {
-				document.body.classList.add('cv-printing')
-				window.addEventListener('afterprint', cleanup, { once: true })
-				setTimeout(() => {
-					window.print()
-					setTimeout(cleanup, 1000)
-				}, 50)
-			} catch (e) {
-				cleanup()
-			}
-		})
-	}
 	const langToggle = document.getElementById('langToggle')
 	if (langToggle) {
 		langToggle.addEventListener('click', () =>
